@@ -1,0 +1,8 @@
+---- Here we have the insertion of the category of wine
+--INSERT INTO category (name) VALUES ('Vinho Tinto');
+--
+---- Here we have the insertion of the product wine
+--INSERT INTO product (title, description, image, price) VALUES ('Vinho do Porto',' vinho originado do portugal, ano 2001','url:000000',278,00);
+--
+---- the middle table
+--INSERT INTO product_category (product_id, category_id) VALUES (1,1)
