@@ -16,11 +16,7 @@ function Vinhos() {
                 </h2>
 
                 <Carousel>
-                    {/* <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' /> */}
+        
                 </Carousel>
 
             </section>
