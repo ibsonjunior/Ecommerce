@@ -1,0 +1,117 @@
+body {
+    background-color: #231F2A;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    width: 100vw;
+    height: 30vh;
+    background-color: #000;
+    color: white;
+}
+
+.navbar>svg {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin: 1rem;
+    color: white;
+}
+
+.navbar__logo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 0.5rem;
+    margin-top: 1.5rem;
+}
+
+
+.navbar__logo img {
+    width: 5rem;
+    height: 5rem;
+}
+
+#adega {
+    margin-top: 1rem;
+    width: 50vw;
+    height: 20vh;
+}
+
+.wineHouse {
+    width: 100vw;
+    height: 30vh;
+    background-color: #000;
+}
+
+.Carousel {
+    background-color: #000;
+
+}
+
+.carousel__div {
+    height: 60vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 90vw;
+    border-radius: 1.5rem;
+    background-color: #231F2A;
+}
+
+.carousel__item {
+    background: transparent;
+    background-image: url(../src/assets/Vinho_Branco/VeuveClicquot.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    width: 22vw;
+}
+
+.carousel__description {
+    color: white;
+}
+
+.harmony {
+    width: 100vw;
+    height: 70vh;
+    background-color: #231F2A;
+}
+
+.Carousel__harmony{
+    margin-top: 2.5rem;
+    background-color: #231F2A;
+}
+
+.carousel__item__harmony{
+    background: transparent;
+    background-image: url(./assets/Harmonizações/Massas.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 40vh;
+    width: 70vw;
+}
+
+.carousel__harmony__div{
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.footer{
+    margin-top: 2rem;
+    width: 100vw;
+    height: 25vh;
+    background-color: #000;
+    background-image: url(./assets/Icones/LogoFooter_Básico.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
