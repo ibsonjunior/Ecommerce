@@ -1,6 +1,7 @@
-import Carousel from 'carousel-react-rcdev'
+import "react-responsive-carousel/lib/styles/carousel.min.css";
+import { Carousel } from 'react-responsive-carousel';
 
-function Vinhos() {
+export default function Wines() {
     return(
     
     <>
@@ -9,46 +10,94 @@ function Vinhos() {
                 Vinhos
             </h1>
 
-            <section className="vinhosTinto">
+            <section className="red_wine">
                 
                 <h2 className="wine_names">
                     Vinho Tinto
                 </h2>
 
-                <Carousel>
-        
-                </Carousel>
+                <Carousel className="Carousel__harmony">
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description__harmony">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+                </div>
+            </Carousel>
 
             </section>
 
-            <section className="vinhosBranco">
+            <section className="white_wine">
 
                 <h2 className="wine_names">
                     Vinho Branco
                 </h2>
 
-                <Carousel>
-                    {/* <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' /> */}
-                </Carousel>
+                <Carousel className="Carousel__harmony">
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description__harmony">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+                </div>
+            </Carousel>
 
             </section>
 
-            <section className="vinhosVerde">
+            <section className="green_wine">
                 <h2 className="wine_names">
                     Vinho Verde
                 </h2>
+                <Carousel className="Carousel__harmony">
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
 
-                <Carousel>
-                    {/* <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' />
-                    <img src='https://via.placeholder.com/150' alt='imagem' title='imagem' /> */}
-                </Carousel>
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item"></div>
+                    <div className="carousel__description">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+
+                </div>
+                <div className="carousel__harmony__div">
+                    <div className="carousel__item__harmony"></div>
+                    <div className="carousel__description__harmony">
+                        <h1 className="carousel__title">TITULO</h1>
+                    </div>
+                </div>
+            </Carousel>
                 
             </section>
 

@@ -105,6 +105,10 @@ body {
     align-items: center;
 }
 
+.Container_wines{
+    border-radius:0 10px 0 0;
+}
+
 .footer{
     margin-top: 2rem;
     width: 100vw;

@@ -1,7 +1,11 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
+import Wines from './pages/Wines'
+import WineProduct from './pages/WineProduct'
 import './provisoryCss.css'
+
+
 
 import { Routes, Route } from 'react-router-dom';
 
@@ -37,6 +41,10 @@ function App() {
 				  </div>
 			  </div>
 		  </div>
+      {/* <Wines /> */}
+      <WineProduct />
+
+      <Wines/>
     </>
   )
 }
