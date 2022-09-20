@@ -14,12 +14,6 @@ body {
     height: auto;
 }
 
-.row {
-    margin-top: 0;
-    margin-left: 0
-}
-
-
 #root {
     max-width: 100vw;
     overflow-x: hidden;
@@ -217,10 +211,4 @@ body {
     transform: translateX(-250px);
 }
 
-.col{
-    margin-left: -12px;
-}
 
-.container{
-    padding: 0;
-}
