@@ -41,7 +41,7 @@ function App() {
 				  </div>
 			  </div>
 		  </div>
-      {/* <Wines /> */}
+     
       <WineProduct />
 
       <Wines/>

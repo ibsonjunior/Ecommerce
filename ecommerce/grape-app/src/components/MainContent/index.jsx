@@ -1,34 +1,76 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-bootstrap/Carousel';
 
 function MainContent() {
     return (
         <>
-            <Carousel className="Carousel">
-                <div className="carousel__div">
-                    <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                        <p >Legend 1</p>
-                    </div>
+        <div className="Container_wines">
 
-                </div>
-                <div className="carousel__div">
-                    <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                        <p>Legend 2</p>
-                    </div>
+            <div className="wine_home">
+                <h1 className="wine_title">
+                    Melhores Avaliados
+                </h1>
 
-                </div>
-                <div className="carousel__div">
-                    <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                        <p>Legend 2</p>
-                    </div>
-                </div>
-            </Carousel>
+                
+            </div>
+
+            <section className="wines">
+
+                <h2 className="wine_name">
+                        Vinho Branco
+                </h2>
+
+                                
+                    <Carousel className="carousel__div" >
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                    </Carousel>  
+
+            </section>
+
+
+        </div>
+            
+           
+
         </>
     )
 }

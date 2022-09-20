@@ -1,106 +1,183 @@
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+import Carousel from 'react-bootstrap/Carousel';
 
+
+            
 export default function Wines() {
     return(
     
     <>
         <div className="Container_wines">
-            <h1 className="wine_titles">
-                Vinhos
-            </h1>
 
-            <section className="red_wine">
-                
-                <h2 className="wine_names">
-                    Vinho Tinto
-                </h2>
-
-                <Carousel className="Carousel__harmony">
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
+                <div className="wine_home">
 
                 </div>
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
 
-                </div>
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description__harmony">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
-                </div>
-            </Carousel>
+                <h1 className="wine_title">
+                    Vinhos
+                </h1>
 
-            </section>
+        
+            <section className="wines">
 
-            <section className="white_wine">
-
-                <h2 className="wine_names">
+            <h2 className="wine_name">
                     Vinho Branco
-                </h2>
+            </h2>
 
-                <Carousel className="Carousel__harmony">
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
+                            
+                <Carousel className="carousel__div" >
 
-                </div>
-                <div className="carousel__harmony__div">
+                    <Carousel.Item>
                     <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
+                                <Carousel.Caption className="spacee" >
+                                <h1 className="carousel__title">TITULO</h1>
+                                <p className="carousel__title">Legend 2</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
 
-                </div>
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description__harmony">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
-                </div>
-            </Carousel>
+                    <Carousel.Item>
+                    <div className="carousel__item"></div>
+                                <Carousel.Caption className="spacee" >
+                                <h1 className="carousel__title">TITULO</h1>
+                                <p className="carousel__title">Legend 2</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                    <div className="carousel__item"></div>
+                                <Carousel.Caption className="spacee" >
+                                <h1 className="carousel__title">TITULO</h1>
+                                <p className="carousel__title">Legend 2</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                    <div className="carousel__item"></div>
+                                <Carousel.Caption className="spacee" >
+                                <h1 className="carousel__title">TITULO</h1>
+                                <p className="carousel__title">Legend 2</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                    <Carousel.Item>
+                    <div className="carousel__item"></div>
+                                <Carousel.Caption className="spacee" >
+                                <h1 className="carousel__title">TITULO</h1>
+                                <p className="carousel__title">Legend 2</p>
+                        </Carousel.Caption>
+                    </Carousel.Item>
+
+                </Carousel>  
 
             </section>
 
-            <section className="green_wine">
-                <h2 className="wine_names">
-                    Vinho Verde
+
+            <section className="wines">
+
+                <h2 className="wine_name">
+                        Vinho Branco
                 </h2>
-                <Carousel className="Carousel__harmony">
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
 
-                </div>
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item"></div>
-                    <div className="carousel__description">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
+                                
+                    <Carousel className="carousel__div" >
 
-                </div>
-                <div className="carousel__harmony__div">
-                    <div className="carousel__item__harmony"></div>
-                    <div className="carousel__description__harmony">
-                        <h1 className="carousel__title">TITULO</h1>
-                    </div>
-                </div>
-            </Carousel>
-                
-            </section>
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
 
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                    </Carousel>  
+
+                </section>
+
+                <section className="wines">
+
+                <h2 className="wine_name">
+                        Vinho Branco
+                </h2>
+
+                                
+                    <Carousel className="carousel__div" >
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                        <Carousel.Item>
+                        <div className="carousel__item"></div>
+                                    <Carousel.Caption className="spacee" >
+                                    <h1 className="carousel__title">TITULO</h1>
+                                    <p className="carousel__title">Legend 2</p>
+                            </Carousel.Caption>
+                        </Carousel.Item>
+
+                    </Carousel>  
+
+                </section>
+
+          
 
         </div>
     
@@ -110,3 +187,9 @@ export default function Wines() {
     
     
 }
+
+
+
+
+
+
