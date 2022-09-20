@@ -1,19 +1,22 @@
-
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
-  
+
 html {
     scroll-behavior: smooth;
-} 
-  
+}
+
 body {
     background-color: #231F2A;
-    overflow-x: hidden;
     width: 100vw;
     height: auto;
+}
+
+.row {
+    margin-top: 0;
+    margin-left: 0
 }
 
 
@@ -26,6 +29,7 @@ body {
 .navbar {
     display: flex;
     justify-content: space-between;
+    align-items: flex-start;
     width: 100vw;
     height: 30vh;
     background-color: #000;
@@ -52,6 +56,12 @@ body {
     width: 5rem;
     height: 5rem;
 }
+
+.wineHouse img {
+    width: 100vw;
+    height: 30vh;
+}
+
 
 #adega {
     margin-top: 1rem;
@@ -102,12 +112,12 @@ body {
     background-color: #231F2A;
 }
 
-.Carousel__harmony{
+.Carousel__harmony {
     margin-top: 2.5rem;
     background-color: #231F2A;
 }
 
-.carousel__item__harmony{
+.carousel__item__harmony {
     background: transparent;
     background-image: url(./assets/Harmonizações/Massas.png);
     background-size: cover;
@@ -117,7 +127,7 @@ body {
     width: 70vw;
 }
 
-.carousel__harmony__div{
+.carousel__harmony__div {
     height: 70vh;
     display: flex;
     flex-direction: column;
@@ -125,31 +135,32 @@ body {
     align-items: center;
 }
 
-.spacee{
+.spacee {
     margin-left: 20vw;
 }
 
-.Container_wines{
+.Container_wines {
     display: flex;
-    flex-direction:column;
-    justify-content:center;
+    flex-direction: column;
+    justify-content: center;
     width: 100vw;
     margin-top: 30px;
     gap: 20px;
-    border-radius:40px 40px 0px 0px;
+    border-radius: 40px 40px 0px 0px;
     background-color: #000;
-    color:#B8ACA0;
-    -webkit-border-radius:40px 40px 0px 0px;
-    -moz-border-radius:40px 40px 0px 0px;
-    -ms-border-radius:40px 40px 0px 0px;
-    -o-border-radius:40px 40px 0px 0px;
+    color: #B8ACA0;
+    -webkit-border-radius: 40px 40px 0px 0px;
+    -moz-border-radius: 40px 40px 0px 0px;
+    -ms-border-radius: 40px 40px 0px 0px;
+    -o-border-radius: 40px 40px 0px 0px;
 }
 
-.wine_title, .wine_name{
+.wine_title,
+.wine_name {
     margin-left: 7vw;
 }
 
-.wines{
+.wines {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -157,7 +168,7 @@ body {
     margin-bottom: 30px;
 }
 
-.footer{
+.footer {
     margin-top: 2rem;
     width: 100vw;
     height: 25vh;
@@ -166,4 +177,50 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+}
+
+#sidebar {
+    height: 100vh;
+    padding: 0px 10px 0px 50px;
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1;
+    background-color: #B8ACA0;
+}
+
+.sidebar--open {
+    height: 100vh;
+    padding: 0px 10px 0px 50px;
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1;
+    transition: all .5s;
+    transform: translateX(0);
+}
+
+.sidebar--close {
+    height: 100vh;
+    padding: 0px 10px 0px 50px;
+    position: fixed;
+    min-width: 250px;
+    top: 0;
+    left: 0;
+    width: 250px;
+    z-index: 1;
+    transition: all .5s;
+    transform: translateX(-250px);
+}
+
+.col{
+    margin-left: -12px;
+}
+
+.container{
+    padding: 0;
 }
