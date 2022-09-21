@@ -1,9 +1,10 @@
 import { useState } from 'react'
-import Navbar from './components/Navbar';
+import OffcanvasExample from './components/Navbar';
 import Home from './pages/Home'
 import Sidebar from './components/Sidebar';
 import WineProduct from './pages/WineProduct'
 import './provisoryCss.css'
+import Wines from './pages/Wines';
 
 
 
@@ -14,9 +15,7 @@ function App() {
 
   return (
     <>
-      <div >
 
-        <div >
           <div >
             {
               /*
@@ -24,10 +23,10 @@ function App() {
                 da Aplicação.
               */
             }
-            <Navbar statusSidebar={statusSidebar} setSidebar={setSidebar} />
-      <Sidebar statusSidebar={statusSidebar} setSidebar={setSidebar} />
+            <OffcanvasExample />
+            <Sidebar statusSidebar={statusSidebar} setSidebar={setSidebar} />
           </div>
-        </div>
+
 
         <div >
 				  <div >
@@ -37,11 +36,21 @@ function App() {
 								  path="/"
 								  element={<Home />}
 							  />
+
+                <Route
+                  path="/Vinhos"
+                  element={<Wines/>}
+                />
+
+                <Route
+                  path="/Melhores-avaliados"
+                  element={<Wines/>}
+                />
 						  </Routes>
 					  }
 				  </div>
 			  </div>
-		  </div>
+
       
       <WineProduct />
 

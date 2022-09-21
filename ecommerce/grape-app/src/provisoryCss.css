@@ -5,25 +5,25 @@ body {
     box-sizing: border-box;
 }
 
-.navbar {
+/* .navbar {
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
-    /* font-size: x-small; */
+    font-size: x-small;
     width: 100vw;
     height: 30vh;
     background-color: #000;
     color: white;
-}
+} */
 
-.navbar>svg {
+/* .navbar>svg {
     width: 2.5rem;
     height: 2.5rem;
     margin: 1rem;
     color: white;
-}
+} */
 
-.navbar__logo {
+.logo {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -32,17 +32,36 @@ body {
 }
 
 
-.navbar__logo img {
+.logo img {
     width: 5rem;
     height: 5rem;
 }
 
-.navbar input {
-    width: 50vw;
-    padding: 10px;
+.nav-link{
+    color: white;
 }
 
-#sidebar {
+.nav-link img{
+    color: white;
+    width: 5rem;
+    height: 5rem;
+    margin-left: 21vh; 
+}
+
+.toggle {
+    background-color: white;
+    color: white;
+}
+
+span .navbar-toggler-icon{
+    color: white;
+}
+/* .navbar input {
+    width: 50vw;
+    padding: 10px;
+} */
+
+/* #sidebar {
     height: 100vh;
     padding: 0px 10px 0px 50px;
     position: fixed;
@@ -78,7 +97,7 @@ body {
     z-index: 1;
     transition: all .5s;
     transform: translateX(-250px);
-}
+} */
 
 
 #adega {
@@ -88,9 +107,10 @@ body {
 }
 
 .wineHouse {
+    margin-top: 11.5vh;
     width: 100vw;
     height: 30vh;
-    background-color: #000;
+    background-color: black;
 }
 
 img{
