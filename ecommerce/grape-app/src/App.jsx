@@ -1,7 +1,7 @@
 import { useState } from 'react'
 import Navbar from './components/Navbar';
 import Home from './pages/Home'
-import Wines from './pages/Wines'
+import Sidebar from './components/Sidebar';
 import WineProduct from './pages/WineProduct'
 import './provisoryCss.css'
 
@@ -10,26 +10,27 @@ import './provisoryCss.css'
 import { Routes, Route } from 'react-router-dom';
 
 function App() {
-  const [count, setCount] = useState(0)
+  const [statusSidebar, setSidebar] = useState(false)
 
   return (
     <>
-      <div className="container">
+      <div >
 
-        <div className="row">
-          <div className="col">
+        <div >
+          <div >
             {
               /*
                 O componente Nav é responsável pela navegação
                 da Aplicação.
               */
             }
-            <Navbar />
+            <Navbar statusSidebar={statusSidebar} setSidebar={setSidebar} />
+      <Sidebar statusSidebar={statusSidebar} setSidebar={setSidebar} />
           </div>
         </div>
 
-        <div className="row my-3">
-				  <div className="col">
+        <div >
+				  <div >
 					  {
 						  <Routes>
 							  <Route
@@ -41,10 +42,9 @@ function App() {
 				  </div>
 			  </div>
 		  </div>
-      {/* <Wines /> */}
+      
       <WineProduct />
 
-      <Wines/>
     </>
   )
 }

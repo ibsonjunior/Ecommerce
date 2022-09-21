@@ -1,7 +1,7 @@
 
 import Footer from '../components/Footer';
-import HarmonyCarousel from '../components/HarmonyCarousel';
-import MainContent from '../components/MainContent/index';
+import HarmonyCarousel from '../components/Harmony';
+import MainContent from '../components/MainCarousel/index';
 import WineHouse from "../components/WineHouse";
 
 
