@@ -1,5 +1,3 @@
-import { Link, Route, Routes } from 'react-router-dom';
-
 function Sidebar({ statusSidebar, setSidebar }) {
   return (
     <>
@@ -20,12 +18,6 @@ function Sidebar({ statusSidebar, setSidebar }) {
             fechar
           </button>
 
-          <Link
-            className="nav-link"
-            to="/Vinhos"
-          >
-            Vinhos
-          </Link>
         </div>
       </>
     </>

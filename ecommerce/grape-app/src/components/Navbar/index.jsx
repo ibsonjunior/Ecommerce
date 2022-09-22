@@ -1,76 +1,64 @@
-import Logo from "../../assets/Icones/Logo_NavBar.png";
-import Button from "react-bootstrap/Button";
-import Container from "react-bootstrap/Container";
-import Form from "react-bootstrap/Form";
-import Nav from "react-bootstrap/Nav";
+import LogoNav from "../../assets/Icones/Logo_NavBar.png";
+import OffCanvasExample from "../OffCanvas";
+
 import Navbar from "react-bootstrap/Navbar";
+import Container from "react-bootstrap/Container";
+import Nav from "react-bootstrap/Nav";
+import Form from "react-bootstrap/Form";
+import Button from "react-bootstrap/Button";
+
 import { Link } from "react-router-dom";
 
-function OffcanvasExample() {
+import { TiShoppingCart } from "react-icons/ti";
+
+function NavScroll() {
   return (
     <>
-      <Navbar variant="light" bg="black" expand="sm" style={{ position: "fixed", width: "100vw"}} >
+      <Navbar
+        bg="black"
+        expand="sm"
+        fixed="top"
+        className="justify-content-center"
+      >
         <Container fluid>
+
+          <OffCanvasExample />
 
           <Navbar.Brand href="#">
             <Link className="nav-link" to="/">
-              <img className="logo" src={Logo} alt="" />
+              <img className="logo" src={LogoNav} alt="" />
             </Link>
           </Navbar.Brand>
 
-          <Navbar.Toggle className="toggle" aria-controls="navbarScroll"/>
+          <Button className="shoppingCart" variant="outline-disabled">
+            <Link className="nav-link" to="/Carrinho">
+              <TiShoppingCart />
+            </Link>
+          </Button>
 
-          <Navbar.Collapse id="navbarScroll">
-            <Nav
-              className="me-auto my-2 my-lg-0"
-              style={{ maxHeight: "160px" }}
-              navbarScroll
-            >
-              <Nav.Link href="#action1">
-                <Link className="nav-link" to="/Vinhos">
-                  Vinhos
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link href="#action2">
-                <Link className="nav-link" to="/Melhores-avaliados">
-                  Melhores Avaliados
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link href="#action3">
-                <Link className="nav-link" to="/Harmonizacoes">
-                  Harmonizações
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link href="#action4">
-                <Link className="nav-link" to="/Nossa-historia">
-                  Nossa História
-                </Link>
-              </Nav.Link>
-
-              <Nav.Link href="#action5">
-                <Link className="nav-link" to="/Carrinho">
-                  Carrinho
-                </Link>
-              </Nav.Link>
-            </Nav>
-
+          <Nav
+            className="mx-auto my-2 my-sm-2 justify-content-center"
+            // style={{ maxHeight: "300px" }}
+            navbarScroll
+          >
+            <Nav.Item
+              className="justify-content-center">
+              <h2 className="text-center mt-0 mb-3 me-3 ">Sua adega virtual</h2>
+            </Nav.Item>
             <Form className="d-flex">
               <Form.Control
                 type="search"
                 placeholder="Search"
-                className="me-2"
+                className="me-3"
                 aria-label="Search"
               />
               <Button variant="outline-success">Search</Button>
             </Form>
-          </Navbar.Collapse>
+          </Nav>
         </Container>
       </Navbar>
     </>
   );
 }
 
-export default OffcanvasExample;
+export default NavScroll;

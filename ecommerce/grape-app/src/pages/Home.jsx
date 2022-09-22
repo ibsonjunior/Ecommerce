@@ -1,23 +1,21 @@
-
-import Footer from '../components/Footer';
-import HarmonyCarousel from '../components/Harmony';
-import MainContent from '../components/MainCarousel/index';
+import Footer from "../components/Footer";
+import HarmonyCarousel from "../components/Harmony";
+import MainContent from "../components/MainCarousel/index";
 import WineHouse from "../components/WineHouse";
 
+function Home() {
+  return (
+    <>
+      <WineHouse />
+      <MainContent />
 
-function Home(){
-    return(
-        <>
-        <WineHouse />
-        <MainContent />
-        <div className="harmony">
+      <div className="harmony">
         <HarmonyCarousel />
-        </div>
+      </div>
 
-        
-        <Footer />
-        </>
-    )
+      <Footer />
+    </>
+  );
 }
 
 export default Home;
