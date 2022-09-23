@@ -6,9 +6,15 @@ import com.br.ecommerce.entities.Category;
 import com.br.ecommerce.entities.Product;
 import com.br.ecommerce.repositories.CategoryRepository;
 import com.br.ecommerce.repositories.ProductRepository;
+import com.br.ecommerce.services.exceptions.DatabaseWineException;
+import com.br.ecommerce.services.exceptions.EntityWineNotFoundException;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataIntegrityViolationException;
+import org.springframework.dao.EmptyResultDataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+
+import javax.persistence.EntityNotFoundException;
 import java.util.List;
 import java.util.Optional;
 import java.util.stream.Collectors;
@@ -24,35 +30,65 @@ public class ProductService {
 
     @Transactional(readOnly = true)
     public List<ProductDto> searchAll() {
-        List<Product> list = repository.findAll();
-        return list.stream().map(x -> new ProductDto(x)).collect(Collectors.toList());
+        try{
+            List<Product> list = repository.findAll();
+            return list.stream().map(x -> new ProductDto(x)).collect(Collectors.toList());
+        } catch (EntityNotFoundException e){
+            throw new EntityWineNotFoundException(
+                    "Registros Não Encontrados!"
+            );
+        }
     }
 
     @Transactional(readOnly = true)
     public ProductDto  searchById(Integer id) {
         Optional<Product> object = repository.findById(id);
-        Product entity = object.get();
+//        Product entity = object.get();
+//        Faz o get e também trabalha exceção
+        Product entity = object.orElseThrow(() -> new EntityWineNotFoundException("Registro: " + id + " Não Encontrado"));
         return new ProductDto(entity);
     }
 
     public void delete(Integer id) {
-        repository.deleteById(id);
+        try{
+            repository.deleteById(id);
+        }
+        catch (EmptyResultDataAccessException e){
+            throw new EntityWineNotFoundException(
+                    "Exclusão não possível não realizada!" +
+                            id + "Não encontrado!"
+
+            );
+        }
+        catch (DataIntegrityViolationException e){
+            throw new DatabaseWineException(
+                    "Violação de integridade: Registro" +
+                            id + "está em outro registro!"
+            );
+        }
     }
 
     @Transactional
     public ProductDto insert(ProductDto dto) {
-        Product entity = new Product();
-        copyDtoForEntity(dto, entity);
-        entity = repository.save(entity);
-        return new ProductDto(entity);
+            Product entity = new Product();
+            copyDtoForEntity(dto, entity);
+            entity = repository.save(entity);
+            return new ProductDto(entity);
     }
 
     @Transactional
     public ProductDto update(Integer id, ProductDto dto) {
-        Product entity = repository.getReferenceById(id);
-        copyDtoForEntity(dto, entity);
-        entity = repository.save(entity);
-        return new ProductDto(entity);
+        try{
+            Product entity = repository.getReferenceById(id);
+            copyDtoForEntity(dto, entity);
+            entity = repository.save(entity);
+            return new ProductDto(entity);
+        } catch (EntityNotFoundException e){
+            throw new EntityWineNotFoundException(
+                    "Registro" + id + "Não encontrado!"
+            );
+        }
+
     }
 
     private void copyDtoForEntity(ProductDto dto, Product entity) {
