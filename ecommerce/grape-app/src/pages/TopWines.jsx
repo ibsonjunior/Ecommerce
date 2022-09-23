@@ -1,3 +1,5 @@
+import Footer from '../components/Footer'
+
 function MelhoresVinhos() {
   return (
     <>
@@ -73,6 +75,8 @@ function MelhoresVinhos() {
           </div>
         </div>
       </section>
+
+      <Footer />
     </>
   );
 }

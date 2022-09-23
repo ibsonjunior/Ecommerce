@@ -1,0 +1,38 @@
+.container_wines {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: auto;
+  margin-top: 11vh;
+  background-color: $bg_color;
+}
+
+.wines {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  margin-top: 10vh;
+  background-color: $bg_color2;
+  color: #b8aca0;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.wines_section{
+  background-color: $bg_color3;
+}
+
+.wine_titles {
+  font-family: $Font_Everything;
+  margin-top: 5vh;
+  margin-left: 4vh;
+}
+
+.wine_name {
+  font-family: $Font_Everything;
+  margin: 5vh;
+}
+
+.carousel-wine-item {
+  height: 45vh;
+  width: 100%;
+}

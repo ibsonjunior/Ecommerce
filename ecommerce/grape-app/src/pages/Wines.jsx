@@ -1,86 +1,86 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import Cordeiro from '../assets/Vinho_Branco/Cordeiro.png'
+import GuardaRios from '../assets/Vinho_Branco/GuardaRios.png'
+import Footer from '../components/Footer'
 
 export default function Wines() {
-  return (
+
+  return(
+
     <>
-      <div className="Container_wines">
-        <h1 className="wine_titles">Vinhos</h1>
+        <div className="container_wines">
+          <div className="wines">
+         
+            <div>
+              <h1 className="wine_titles">Vinhos</h1>
+            </div>
 
-        <section className="red_wine">
-          <h2 className="wine_names">Vinho Tinto</h2>
+            <section className="wines_section">
+              <h2 className="wine_name">Vinho Tinto</h2>
+              <div
+                id="carouselExampleFade"
+                className="carousel slide carousel-fade"
+                data-bs-ride="carousel"
+              >
+                <div className="carousel-inner">
+                  <div className="carousel-item carousel-wine-item active">
+                    <img src={Cordeiro} className="d-block w-100" alt="..." />
+                  </div>
+                  <div className="carousel-item carousel-wine-item">
+                    <img src={GuardaRios} className="d-block w-100" alt="..." />
+                  </div>
+                  <div className="carousel-item carousel-wine-item">
+                    <img src={Cordeiro} className="d-block w-100" alt="..." />
+                  </div>
+                  <div className="carousel-item carousel-wine-item">
+                    <img src={GuardaRios} className="d-block w-100" alt="..." />
+                  </div>
+                  <div className="carousel-item carousel-wine-item">
+                    <img src={Cordeiro} className="d-block w-100" alt="..." />
+                  </div>
+                </div>
 
-          <Carousel className="Carousel__harmony">
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
+                <button
+                  className="carousel-control-prev"
+                  type="button"
+                  data-bs-target="#carouselExampleFade"
+                  data-bs-slide="prev"
+                >
+                  <span
+                    className="carousel-control-prev-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Previous</span>
+                </button>
+                <button
+                  className="carousel-control-next"
+                  type="button"
+                  data-bs-target="#carouselExampleFade"
+                  data-bs-slide="next"
+                >
+                  <span
+                    className="carousel-control-next-icon"
+                    aria-hidden="true"
+                  ></span>
+                  <span className="visually-hidden">Next</span>
+                </button>
               </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description__harmony">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-          </Carousel>
-        </section>
 
-        <section className="white_wine">
-          <h2 className="wine_names">Vinho Branco</h2>
+            </section>
 
-          <Carousel className="Carousel__harmony">
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description__harmony">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-          </Carousel>
-        </section>
+     
 
-        <section className="green_wine">
-          <h2 className="wine_names">Vinho Verde</h2>
-          <Carousel className="Carousel__harmony">
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item"></div>
-              <div className="carousel__description">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-            <div className="carousel__harmony__div">
-              <div className="carousel__item__harmony"></div>
-              <div className="carousel__description__harmony">
-                <h1 className="carousel__title">TITULO</h1>
-              </div>
-            </div>
-          </Carousel>
-        </section>
-      </div>
+            
+            <Footer />
+
+          </div>
+
+        </div>
+
+      
+
     </>
-  );
+  
+  )
+
 }

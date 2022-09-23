@@ -1,85 +1,88 @@
-import React, { useState } from "react";
+// ATENÇÃO:  ESSE COMPONENTE NÃO ESTÁ SENDO UTILIZADO!!
 
-import LogoSide from "../../assets/Icones/Logo_SideBar.png";
+// import React, { useState } from "react";
 
-import Nav from "react-bootstrap/Nav";
-import Button from "react-bootstrap/Button";
-import Offcanvas from "react-bootstrap/Offcanvas";
+// import LogoSide from "../../assets/Icones/Logo_SideBar.png";
 
-import { Link } from "react-router-dom";
+// import Nav from "react-bootstrap/Nav";
+// import Button from "react-bootstrap/Button";
+// import Offcanvas from "react-bootstrap/Offcanvas";
 
-import { GiHamburgerMenu } from "react-icons/gi";
+// import { Link } from "react-router-dom";
 
-function OffCanvasExample({ name, ...props }) {
-  const [show, setShow] = useState(false);
+// import { GiHamburgerMenu } from "react-icons/gi";
 
-  const handleClose = () => setShow(false);
-  const toggleShow = () => setShow((s) => !s);
+// function OffCanvasExample({ name, ...props }) {
+//   const [show, setShow] = useState(false);
 
-  return (
-    <>
-      <Button variant="{primary} {outline-disabled}" onClick={toggleShow} className="me-2" style={{ background: "white"}} >
-        <GiHamburgerMenu /> {name}
-      </Button>
+//   const handleClose = () => setShow(false);
+//   const toggleShow = () => setShow((s) => !s);
 
-      <Offcanvas show={show} onHide={handleClose} {...props} style={{ background: "black", maxWidth: "250px" }}>
+//   return (
+//     <>
+//       <Button
+//         variant="{primary} {outline-disabled}"
+//         onClick={toggleShow}
+//         className="me-2"
+//         style={{ background: "white" }}
+//       >
+//         <GiHamburgerMenu /> {name}
+//       </Button>
 
-        <Offcanvas.Header closeButton>
+//       <Offcanvas
+//         show={show}
+//         onHide={handleClose}
+//         {...props}
+//         style={{ background: "black", maxWidth: "250px" }}
+//       >
+//         <Offcanvas.Header closeButton>
+//           <Offcanvas.Title>
+//             <Link className="nav-link" to="/">
+//               <img className="logo" src={LogoSide} alt="" />
+//             </Link>
+//           </Offcanvas.Title>
+//         </Offcanvas.Header>
 
-          <Offcanvas.Title>
-            <Link className="nav-link" to="/">
-              <img className="logo" src={LogoSide} alt="" />
-            </Link>
-          </Offcanvas.Title>
+//         <Offcanvas.Body>
+//           <Nav
+//             className="mx-auto my-2 my-md-0"
+//             // style={{ maxHeight: "300px" }}
+//             navbarScroll
+//           >
+//             <Nav.Link href="#action1">
+//               <Link className="nav-link" to="/Vinhos">
+//                 Vinhos
+//               </Link>
+//             </Nav.Link>
 
-        </Offcanvas.Header>
+//             <Nav.Link href="#action2">
+//               <Link className="nav-link" to="/Melhores-avaliados">
+//                 Melhores Avaliados
+//               </Link>
+//             </Nav.Link>
 
-        <Offcanvas.Body>
+//             <Nav.Link href="#action3">
+//               <Link className="nav-link" to="/Harmonizacoes">
+//                 Harmonizações
+//               </Link>
+//             </Nav.Link>
 
-          <Nav
-            className="mx-auto my-2 my-md-0"
-            // style={{ maxHeight: "300px" }}
-            navbarScroll
-          >
+//             <Nav.Link href="#action4">
+//               <Link className="nav-link" to="/Nossa-historia">
+//                 Nossa História
+//               </Link>
+//             </Nav.Link>
 
-            <Nav.Link href="#action1">
-              <Link className="nav-link" to="/Vinhos">
-                Vinhos
-              </Link>
-            </Nav.Link>
+//             <Nav.Link href="#action5">
+//               <Link className="nav-link" to="/Carrinho">
+//                 Carrinho
+//               </Link>
+//             </Nav.Link>
+//           </Nav>
+//         </Offcanvas.Body>
+//       </Offcanvas>
+//     </>
+//   );
+// }
 
-            <Nav.Link href="#action2">
-              <Link className="nav-link" to="/Melhores-avaliados">
-                Melhores Avaliados
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link href="#action3">
-              <Link className="nav-link" to="/Harmonizacoes">
-                Harmonizações
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link href="#action4">
-              <Link className="nav-link" to="/Nossa-historia">
-                Nossa História
-              </Link>
-            </Nav.Link>
-
-            <Nav.Link href="#action5">
-              <Link className="nav-link" to="/Carrinho">
-                Carrinho
-              </Link>
-            </Nav.Link>
-
-          </Nav>
-
-        </Offcanvas.Body>
-
-      </Offcanvas>
-
-    </>
-  );
-}
-
-export default OffCanvasExample;
+// export default OffCanvasExample;

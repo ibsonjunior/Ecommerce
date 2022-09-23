@@ -1,7 +1,7 @@
-import Footer from "../components/Footer";
-import HarmonyCarousel from "../components/Harmony";
-import MainContent from "../components/MainCarousel/index";
 import WineHouse from "../components/WineHouse";
+import MainContent from "../components/MainCarousel/index";
+import HarmonyCarousel from "../components/Harmony";
+import Footer from "../components/Footer";
 
 function Home() {
   return (

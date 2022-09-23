@@ -73,7 +73,7 @@ function NavOffCanvas() {
                   </Nav.Link>
 
                   <Nav.Link href="#action4">
-                    <Link className="nav-link" to="/Nossa-historia">
+                    <Link className="nav-link" to="/NossaHistoria">
                       Nossa História
                     </Link>
                   </Nav.Link>
