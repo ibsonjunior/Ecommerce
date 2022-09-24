@@ -3,7 +3,7 @@
   flex-direction: column;
   width: 100vw;
   height: auto;
-  margin-top: 11vh;
+  margin-top: 10vh;
   background-color: $bg_color;
 }
 
@@ -18,7 +18,7 @@
 }
 
 .wines_section{
-  background-color: $bg_color3;
+  background-color: $bg_color2;
 }
 
 .wine_titles {
@@ -29,10 +29,11 @@
 
 .wine_name {
   font-family: $Font_Everything;
-  margin: 5vh;
 }
 
 .carousel-wine-item {
+  background-color: $bg_color3;
   height: 45vh;
   width: 100%;
 }
+

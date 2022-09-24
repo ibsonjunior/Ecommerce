@@ -2,7 +2,22 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Cordeiro from "../../assets/Vinho_Branco/Cordeiro.png";
 import GuardaRios from "../../assets/Vinho_Branco/GuardaRios.png";
 
+import React, { useState, useEffect } from 'react';
+
+
 function MainContent() {
+
+  const [wineState, setWine] = useState(null);
+
+  useEffect(() => {
+    console.log("useEffect")
+
+    async function enviandoRequisicao(){
+      
+    }
+  },[])
+
+
   return (
     <>
       <div

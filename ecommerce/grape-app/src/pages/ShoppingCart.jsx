@@ -1,4 +1,5 @@
 import Garrafa from '../assets/Vinho_Tinto/calitera.png'
+import Footer from '../components/Footer'
 
 function ShoppingCart(){
     return(
@@ -14,6 +15,7 @@ function ShoppingCart(){
             </div>
         </div>
         </div>
+        <Footer />
         </>
     )
 }

@@ -1,8 +1,8 @@
-import Aves from "../../assets/Harmonizações/Aves.png";
-import Carne from "../../assets/Harmonizações/Carne_Curada.png";
-// import Cordeiro from '../../assets/Harmonizações/Cordeiro.png'
-// import Massas from '../../assets/Harmonizações/Massas.png'
-// import Peixe from '../../assets/Harmonizações/peixe.png'
+import Aves from "../../assets/Harmonization/Aves.png";
+import Carne from "../../assets/Harmonization/Carne_Curada.png";
+// import Cordeiro from '../../assets/Harmonization/Cordeiro.png'
+// import Massas from '../../assets/Harmonization/Massas.png'
+// import Peixe from '../../assets/Harmonization/Peixe.png'
 
 function HarmonyCarousel() {
   return (

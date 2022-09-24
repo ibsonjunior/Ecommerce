@@ -105,7 +105,6 @@ img {
 .shoppingCart__Card {
   width: 100vw;
   height: 70vh;
-  margin-top: 19vh;
   background-color: white;
 }
 
@@ -120,7 +119,7 @@ img {
           align-items: flex-start;
   -ms-flex-pack: distribute;
       justify-content: space-around;
-  color: aliceblue;
+  color: white;
   background-color: #29232c;
   border-radius: 15px;
 }
@@ -157,12 +156,12 @@ img {
   color: black;
   border: solid white 1px;
   border-radius: 10px;
-  padding: 1rem;
 }
 
 .btn__options button {
   background: transparent;
-  color: white;
+  border: none;
+  color: black;
 }
 
 /* Top Wines */
@@ -419,7 +418,7 @@ img {
           flex-direction: column;
   width: 100vw;
   height: auto;
-  margin-top: 11vh;
+  margin-top: 10vh;
   background-color: #000000;
 }
 
@@ -438,6 +437,10 @@ img {
   border-radius: 50px 50px 0px 0px;
 }
 
+.wines_section {
+  background-color: #29232c;
+}
+
 .wine_titles {
   font-family: Roboto;
   margin-top: 5vh;
@@ -446,10 +449,10 @@ img {
 
 .wine_name {
   font-family: Roboto;
-  margin: 5vh;
 }
 
 .carousel-wine-item {
+  background-color: azure;
   height: 45vh;
   width: 100%;
 }
@@ -471,6 +474,6 @@ body {
 }
 
 .mainContent {
-  margin-top: 15vh;
+  margin-top: 21vh;
 }
 /*# sourceMappingURL=grapeApp.css.map */

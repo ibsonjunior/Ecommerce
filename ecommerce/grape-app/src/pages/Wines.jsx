@@ -22,7 +22,7 @@ export default function Wines() {
                 className="carousel slide carousel-fade"
                 data-bs-ride="carousel"
               >
-                <div className="carousel-inner">
+                <div className="carousel-inner carousel-div ">
                   <div className="carousel-item carousel-wine-item active">
                     <img src={Cordeiro} className="d-block w-100" alt="..." />
                   </div>
