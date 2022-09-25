@@ -3,6 +3,7 @@ import MainContent from "../components/MainCarousel/index";
 import HarmonyCarousel from "../components/Harmony";
 import Footer from "../components/Footer";
 
+
 import React, { useState, useEffect } from "react";
 
 function Home() {
@@ -33,11 +34,9 @@ function Home() {
   useEffect(() => {
     console.log("useEffect");
 
-    fetch("http://localhost:9000/categories").then((response) => {
-      response.json().then((data) => {
-        console.log(data[0]);
-        console.log(data[0].products);
-        console.log(data[0].products[0].image);
+    fetch("http://54.219.149.136:9000/products").then((response) => {
+      response.json().then((data)=>{
+        console.log(data)
       });
     });
   }, []);
@@ -47,6 +46,7 @@ function Home() {
   return (
     <>
       <WineHouse />
+      <h1>MELHORES VINHOS</h1>
       <MainContent />
 
       <div className="harmony">
@@ -54,6 +54,7 @@ function Home() {
       </div>
 
       <Footer />
+
     </>
   );
 }

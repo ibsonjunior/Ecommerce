@@ -9,6 +9,7 @@
 @import "./componentStyle/NavOff";
 @import "./componentStyle/WineHouse";
 @import "./componentStyle/WinesCarousel";
+@import "./componentStyle/ButtonAdd";
 
 // Import das folhas de estilo das páginas:
 @import "./pageStyle/Harmonization";
@@ -18,6 +19,7 @@
 @import "./pageStyle/TopWines";
 @import "./pageStyle/WineProduct";
 @import "./pageStyle/Wines";
+@import "./pageStyle/Administration";
 
 * {
     margin: 0;
