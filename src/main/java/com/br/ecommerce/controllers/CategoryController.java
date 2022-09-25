@@ -12,6 +12,7 @@ import java.net.URI;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "*", allowedHeaders = "*")
 @RequestMapping(value = "/categories")
 public class CategoryController {
 
