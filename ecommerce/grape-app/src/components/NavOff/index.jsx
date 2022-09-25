@@ -79,8 +79,8 @@ function NavOffCanvas() {
                   </Nav.Link>
 
                   <Nav.Link href="#action5">
-                    <Link className="nav-link" to="/Carrinho">
-                      Carrinho
+                    <Link className="nav-link" to="/Administration">
+                      Administrador
                     </Link>
                   </Nav.Link>
                 </Nav>

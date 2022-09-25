@@ -5,7 +5,7 @@ function ButtonAdd() {
 
     const [quantidade, setQuantidade] = useState(
         (quantidade) => {
-            return quantidade = 0;
+            return quantidade = 1;
         }
     )
 

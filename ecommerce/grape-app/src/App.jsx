@@ -7,6 +7,7 @@ import TopWines from "./pages/TopWines";
 import Harmonizations from "./pages/Harmonizations";
 import ShoppingCart from "./pages/ShoppingCart";
 import NossaHistoria from "./pages/NossaHistoria";
+import Administration from "./pages/Administration"
 
 import { Routes, Route } from "react-router-dom";
 
@@ -49,6 +50,11 @@ function App() {
               <Route
               path="/NossaHistoria"
               element={<NossaHistoria />}
+            />
+
+              <Route
+              path="/Administration"
+              element={<Administration />}
             />
 
           </Routes>
