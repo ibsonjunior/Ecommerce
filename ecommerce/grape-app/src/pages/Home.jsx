@@ -3,7 +3,6 @@ import MainContent from "../components/MainCarousel/index";
 import HarmonyCarousel from "../components/Harmony";
 import Footer from "../components/Footer";
 
-
 import React, { useState, useEffect } from "react";
 
 function Home() {
@@ -31,15 +30,15 @@ function Home() {
     });
   }, []); */
 
-  useEffect(() => {
-    console.log("useEffect");
+  // useEffect(() => {
+  //   console.log("useEffect");
 
-    fetch("http://54.219.149.136:9000/products").then((response) => {
-      response.json().then((data)=>{
-        console.log(data)
-      });
-    });
-  }, []);
+  //   fetch("http://52.53.186.98:9000/products").then((response) => {
+  //     response.json().then((data)=>{
+  //       console.log(data)
+  //     });
+  //   });
+  // }, []);
 
 
 

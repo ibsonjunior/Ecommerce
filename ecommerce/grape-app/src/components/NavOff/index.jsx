@@ -80,12 +80,12 @@ function NavOffCanvas() {
 
                   <Nav.Link href="#action5">
                     <Link className="nav-link" to="/Administration">
-                      Administrador
+                      Admin
                     </Link>
                   </Nav.Link>
                 </Nav>
 
-                <Form className="d-flex">
+                <Form className="d-flex block">
                   <Form.Control
                     type="search"
                     placeholder="Search"

@@ -22,6 +22,7 @@ import { Container, Row, Col, Card } from "react-bootstrap";
 
 function Harmonizations() {
   return (
+    <>
     <Container fluid className="harmonyCards bg-dark">
       <Row xs={2} md={4}>
         <Col xs={6} md={3}>
@@ -209,6 +210,16 @@ function Harmonizations() {
         </Col>
       </Row>
     </Container>
+<div>
+
+
+</div>
+
+
+
+
+</>
+
   );
 }
 

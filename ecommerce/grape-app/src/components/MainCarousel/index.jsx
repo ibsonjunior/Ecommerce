@@ -1,22 +1,25 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import Cordeiro from "../../assets/Vinho_Branco/Cordeiro.png";
-import GuardaRios from "../../assets/Vinho_Branco/GuardaRios.png";
 
-import React, { useState, useEffect } from 'react';
-
+import React, { useState, useEffect } from "react";
 
 function MainContent() {
-
-  const [wineState, setWine] = useState(null);
+  const [wineState, setWine] = useState([]);
 
   useEffect(() => {
-    console.log("useEffect")
+    fetch("http://52.53.186.98:9000/products").then((response) => {
+      response.json().then((data) => {
+        setWine(data);
+      });
+    });
+  }, []);
 
-    async function enviandoRequisicao(){
-      
+  let topWine = [];
+
+  topWine = wineState.filter((vinho) => {
+    if (vinho.price > 60.0) {
+      return vinho;
     }
-  },[])
-
+  });
 
   return (
     <>
@@ -27,13 +30,13 @@ function MainContent() {
       >
         <div className="carousel-inner">
           <div className="carousel-item active">
-            <img src={Cordeiro} className="d-block w-100" alt="..." />
+            <img src={topWine[0]?.image} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={GuardaRios} className="d-block w-100" alt="..." />
+            <img src={topWine[1]?.image} className="d-block w-100" alt="..." />
           </div>
           <div className="carousel-item">
-            <img src={Cordeiro} className="d-block w-100" alt="..." />
+            <img src={topWine[2]?.image} className="d-block w-100" alt="..." />
           </div>
         </div>
         <button
