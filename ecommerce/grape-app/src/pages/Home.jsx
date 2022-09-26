@@ -1,9 +1,10 @@
 import WineHouse from "../components/WineHouse";
-import MainContent from "../components/MainCarousel/index";
+import CarouselFadeExample from "../components/MainCarousel/index";
 import HarmonyCarousel from "../components/Harmony";
 import Footer from "../components/Footer";
 
 import React, { useState, useEffect } from "react";
+import Media from "../components/Media";
 
 function Home() {
   const [category, setCategory] = useState({
@@ -46,11 +47,17 @@ function Home() {
     <>
       <WineHouse />
       <h1>MELHORES VINHOS</h1>
-      <MainContent />
+      <CarouselFadeExample />
 
       <div className="harmony">
         <HarmonyCarousel />
       </div>
+
+      <Media />
+
+      {/* <div class="ratio ratio-16x9">
+        <iframe src="https://www.youtube.com/watch?v=AoxoXKXBvoE&t=57s" title="YouTube video" allowfullscreen></iframe>
+      </div> */}
 
       <Footer />
 

@@ -5,8 +5,8 @@ import { useFormik } from "formik";
 const validate = (values) => {
   const errors = {};
 
-  if (!values.productID) {
-    errors.productID = "Obrigatório";
+  if (!values.deleteProductID) {
+    errors.deleteProductID = "Obrigatório";
   }
 
   return errors;
@@ -15,7 +15,7 @@ const validate = (values) => {
 const FormDelete = () => {
   const formik = useFormik({
     initialValues: {
-      productID: "",
+      deleteProductID: "",
     },
     validate,
     onSubmit: (values) => {
@@ -26,17 +26,17 @@ const FormDelete = () => {
 
   return (
     <form className="formAdm" onSubmit={formik.handleSubmit}>
-      <label htmlFor="productID">Product ID</label>
+      <label htmlFor="deleteProductID">Product ID</label>
       <input
-        id="productID"
-        name="productID"
+        id="deleteProductID"
+        name="deleteProductID"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productID}
+        value={formik.values.deleteProductID}
       />
-      {formik.touched.productID && formik.errors.productID ? (
-        <div>{formik.errors.productID}</div>
+      {formik.touched.deleteProductID && formik.errors.deleteProductID ? (
+        <div>{formik.errors.deleteProductID}</div>
       ) : null}
       <button type="submit">Submit</button>
     </form>
@@ -46,7 +46,7 @@ const FormDelete = () => {
 export default FormDelete;
 
 function DeleteWine() {
-  fetch(`http://52.53.186.98:9000/products/${productID.value}`, {
+  fetch(`http://52.53.186.98:9000/products/${deleteProductID.value}`, {
     method: "DELETE",
     headers: {
       Accept: "*/*",

@@ -15,7 +15,7 @@ import { TiShoppingCart } from "react-icons/ti";
 function NavOffCanvas() {
   return (
     <>
-      {["sm"].map((expand) => (
+      {["lg"].map((expand) => (
         <Navbar
           key={expand}
           bg="black"

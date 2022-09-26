@@ -5,24 +5,24 @@ import { useFormik } from "formik";
 const validate = (values) => {
   const errors = {};
 
-  if (!values.productName) {
-    errors.productName = "Obrigatório";
+  if (!values.insertProductName) {
+    errors.insertProductName = "Obrigatório";
   }
 
-  if (!values.productDescription) {
-    errors.productDescription = "Obrigatório";
+  if (!values.insertProductDescription) {
+    errors.insertProductDescription = "Obrigatório";
   }
 
-  if (!values.imageLink) {
-    errors.imageLink = "Obrigatório";
+  if (!values.insertImageLink) {
+    errors.insertImageLink = "Obrigatório";
   }
 
-  if (!values.productPrice) {
-    errors.productPrice = "Obrigatório e apenas NUMEROS";
+  if (!values.insertProductPrice) {
+    errors.insertProductPrice = "Obrigatório e apenas NUMEROS";
   }
 
-  if (!values.categoryId) {
-    errors.categoryId = "Obrigatório e apenas NUMEROS";
+  if (!values.insertCategoryId) {
+    errors.insertCategoryId = "Obrigatório e apenas NUMEROS";
   }
 
   return errors;
@@ -31,11 +31,11 @@ const validate = (values) => {
 const FormPost = () => {
   const formik = useFormik({
     initialValues: {
-      productName: "",
-      productDescription: "",
-      imageLink: "",
-      productPrice: "",
-      categoryId: "",
+      insertProductName: "",
+      insertProductDescription: "",
+      insertImageLink: "",
+      insertProductPrice: "",
+      insertCategoryId: "",
     },
     validate,
     onSubmit: (values) => {
@@ -45,69 +45,69 @@ const FormPost = () => {
   });
   return (
     <form className="formAdm" onSubmit={formik.handleSubmit}>
-      <label htmlFor="productName">Product Name</label>
+      <label htmlFor="insertProductName">Product Name</label>
       <input
-        id="productName"
-        name="productName"
+        id="insertProductName"
+        name="insertProductName"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productName}
+        value={formik.values.insertProductName}
       />
-      {formik.touched.productName && formik.errors.productName ? (
-        <div>{formik.errors.productName}</div>
+      {formik.touched.insertProductName && formik.errors.insertProductName ? (
+        <div>{formik.errors.insertProductName}</div>
       ) : null}
 
-      <label htmlFor="productDescription">Description</label>
+      <label htmlFor="insertProductDescription">Description</label>
       <input
-        id="productDescription"
-        name="productDescription"
+        id="insertProductDescription"
+        name="insertProductDescription"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productDescription}
+        value={formik.values.insertProductDescription}
       />
-      {formik.touched.productDescription && formik.errors.productDescription ? (
-        <div>{formik.errors.productDescription}</div>
+      {formik.touched.insertProductDescription && formik.errors.insertProductDescription ? (
+        <div>{formik.errors.insertProductDescription}</div>
       ) : null}
 
-      <label htmlFor="imageLink">Image Link</label>
+      <label htmlFor="insertImageLink">Image Link</label>
       <input
-        id="imageLink"
-        name="imageLink"
+        id="insertImageLink"
+        name="insertImageLink"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.imageLink}
+        value={formik.values.insertImageLink}
       />
-      {formik.touched.imageLink && formik.errors.imageLink ? (
-        <div>{formik.errors.imageLink}</div>
+      {formik.touched.insertImageLink && formik.errors.insertImageLink ? (
+        <div>{formik.errors.insertImageLink}</div>
       ) : null}
 
-      <label htmlFor="productPrice">Price</label>
+      <label htmlFor="insertProductPrice">Price</label>
       <input
-        id="productPrice"
-        name="productPrice"
+        id="insertProductPrice"
+        name="insertProductPrice"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.price}
+        value={formik.values.insertProductPrice}
       />
-      {formik.touched.productPrice && formik.errors.productPrice ? (
-        <div>{formik.errors.productPrice}</div>
+      {formik.touched.insertProductPrice && formik.errors.insertProductPrice ? (
+        <div>{formik.errors.insertProductPrice}</div>
       ) : null}
 
-      <label htmlFor="categoryId">Category Id</label>
+      <label htmlFor="insertCategoryId">Category Id</label>
       <input
-        id="categoryId"
-        name="categoryId"
+        id="insertCategoryId"
+        name="insertCategoryId"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.categoryId}
+        value={formik.values.insertCategoryId}
       />
-      {formik.touched.categoryId && formik.errors.categoryId ? (
-        <div>{formik.errors.categoryId}</div>
+      {formik.touched.insertCategoryId && formik.errors.insertCategoryId ? (
+        <div>{formik.errors.insertCategoryId}</div>
       ) : null}
 
       <button type="submit">Submit</button>
@@ -118,7 +118,7 @@ const FormPost = () => {
 export default FormPost;
 
 function NewWine() {
-  fetch("http://52.53.186.98:9000/products/", {
+  fetch("http://52.53.186.98:9000/products", {
     method: "POST",
     headers: {
       "Accept": "*/*",
@@ -126,13 +126,13 @@ function NewWine() {
       "Access-Control-Allow-Headers": "*",
     },
     body: JSON.stringify({
-      "title": `${productName.value}`,
-      "description": `${productDescription.value}`,
-      "image": `${imageLink.value}`,
-      "price": `${productPrice.value}`,
+      "title": `${insertProductName.value}`,
+      "description": `${insertProductDescription.value}`,
+      "image": `${insertImageLink.value}`,
+      "price": `${insertProductPrice.value}`,
       "categories": [
         {
-          "id": `${categoryId.value}`,
+          "id": `${insertCategoryId.value}`,
         },
       ],
     }),

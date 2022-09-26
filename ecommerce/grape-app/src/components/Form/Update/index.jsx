@@ -5,28 +5,28 @@ import { useFormik } from "formik";
 const validate = (values) => {
   const errors = {};
 
-  if (!values.productId) {
-    errors.productId = "Obrigatório";
+  if (!values.updateProductId) {
+    errors.updateProductId = "Obrigatório";
   }
 
-  if (!values.productName) {
-    errors.productName = "Obrigatório";
+  if (!values.updateProductName) {
+    errors.updateProductName = "Obrigatório";
   }
 
-  if (!values.productDescription) {
-    errors.productDescription = "Obrigatório";
+  if (!values.updateProductDescription) {
+    errors.updateProductDescription = "Obrigatório";
   }
 
-  if (!values.imageLink) {
-    errors.imageLink = "Obrigatório";
+  if (!values.updateImageLink) {
+    errors.updateImageLink = "Obrigatório";
   }
 
-  if (!values.productPrice) {
-    errors.productPrice = "Obrigatório e apenas NUMEROS";
+  if (!values.updateProductPrice) {
+    errors.updateProductPrice = "Obrigatório e apenas NUMEROS";
   }
 
-  if (!values.categoryId) {
-    errors.categoryId = "Obrigatório e apenas NUMEROS";
+  if (!values.updateCategoryId) {
+    errors.updateCategoryId = "Obrigatório e apenas NUMEROS";
   }
 
   return errors;
@@ -35,12 +35,12 @@ const validate = (values) => {
 const FormUpdate = () => {
   const formik = useFormik({
     initialValues: {
-      productId: "",
-      productName: "",
-      productDescription: "",
-      imageLink: "",
-      productPrice: "",
-      categoryId: "",
+      updateProductId: "",
+      updateProductName: "",
+      updateProductDescription: "",
+      updateImageLink: "",
+      updateProductPrice: "",
+      updateCategoryId: "",
     },
     validate,
     onSubmit: (values) => {
@@ -50,82 +50,82 @@ const FormUpdate = () => {
   });
   return (
     <form className="formAdm" onSubmit={formik.handleSubmit}>
-      <label htmlFor="productId">Product ID</label>
+      <label htmlFor="updateProductId">Product ID</label>
       <input
-        id="productId"
-        name="productId"
+        id="updateProductId"
+        name="updateProductId"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productId}
+        value={formik.values.updateProductId}
       />
-      {formik.touched.productId && formik.errors.productId ? (
-        <div>{formik.errors.productId}</div>
+      {formik.touched.updateProductId && formik.errors.updateProductId ? (
+        <div>{formik.errors.updateProductId}</div>
       ) : null}
 
-      <label htmlFor="productName">Product Name</label>
+      <label htmlFor="updateProductName">Product Name</label>
       <input
-        id="productName"
-        name="productName"
+        id="updateProductName"
+        name="updateProductName"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productName}
+        value={formik.values.updateProductName}
       />
-      {formik.touched.productName && formik.errors.productName ? (
-        <div>{formik.errors.productName}</div>
+      {formik.touched.updateProductName && formik.errors.updateProductName ? (
+        <div>{formik.errors.updateProductName}</div>
       ) : null}
 
-      <label htmlFor="productDescription">Description</label>
+      <label htmlFor="updateProductDescription">Description</label>
       <input
-        id="productDescription"
-        name="productDescription"
+        id="updateProductDescription"
+        name="updateProductDescription"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productDescription}
+        value={formik.values.updateProductDescription}
       />
-      {formik.touched.productDescription && formik.errors.productDescription ? (
-        <div>{formik.errors.productDescription}</div>
+      {formik.touched.updateProductDescription && formik.errors.updateProductDescription ? (
+        <div>{formik.errors.updateProductDescription}</div>
       ) : null}
 
-      <label htmlFor="imageLink">Link da Imagem</label>
+      <label htmlFor="updateImageLink">Link da Imagem</label>
       <input
-        id="imageLink"
-        name="imageLink"
+        id="updateImageLink"
+        name="updateImageLink"
         type="text"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.imageLink}
+        value={formik.values.updateImageLink}
       />
-      {formik.touched.imageLink && formik.errors.imageLink ? (
-        <div>{formik.errors.imageLink}</div>
+      {formik.touched.updateImageLink && formik.errors.updateImageLink ? (
+        <div>{formik.errors.updateImageLink}</div>
       ) : null}
 
-      <label htmlFor="productPrice">Price</label>
+      <label htmlFor="updateProductPrice">Price</label>
       <input
-        id="productPrice"
-        name="productPrice"
+        id="updateProductPrice"
+        name="updateProductPrice"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.productPrice}
+        value={formik.values.updateProductPrice}
       />
-      {formik.touched.productPrice && formik.errors.productPrice ? (
-        <div>{formik.errors.productPrice}</div>
+      {formik.touched.updateProductPrice && formik.errors.updateProductPrice ? (
+        <div>{formik.errors.updateProductPrice}</div>
       ) : null}
 
-      <label htmlFor="categoryId">Category Id</label>
+      <label htmlFor="updateCategoryId">Category Id</label>
       <input
-        id="categoryId"
-        name="categoryId"
+        id="updateCategoryId"
+        name="updateCategoryId"
         type="number"
         onChange={formik.handleChange}
         onBlur={formik.handleBlur}
-        value={formik.values.categoryId}
+        value={formik.values.updateCategoryId}
       />
-      {formik.touched.categoryId && formik.errors.categoryId ? (
-        <div>{formik.errors.categoryId}</div>
+      {formik.touched.updateCategoryId && formik.errors.updateCategoryId ? (
+        <div>{formik.errors.updateCategoryId}</div>
       ) : null}
 
       <button type="submit">Submit</button>
@@ -136,7 +136,7 @@ const FormUpdate = () => {
 export default FormUpdate;
 
 function UpdateWine() {
-  fetch(`http://52.53.186.98:9000/products/${productId.value}`, {
+  fetch(`http://52.53.186.98:9000/products/${updateProductId.value}`, {
     method: "PUT",
     headers: {
       "Accept": "*/* , application/json, text/plain",
@@ -144,13 +144,13 @@ function UpdateWine() {
       "Access-Control-Allow-Headers": "*",
     },
     body: JSON.stringify({
-      "title": `${productName.value}`,
-      "description": `${productDescription.value}`,
-      "image": `${imageLink.value}`,
-      "price": `${productPrice.value}`,
+      "title": `${updateProductName.value}`,
+      "description": `${updateProductDescription.value}`,
+      "image": `${updateImageLink.value}`,
+      "price": `${updateProductPrice.value}`,
       "categories": [
         {
-          "id": `${categoryId.value}`,
+          "id": `${updateCategoryId.value}`,
         },
       ],
     }),

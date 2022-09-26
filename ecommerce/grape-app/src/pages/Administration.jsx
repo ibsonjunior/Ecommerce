@@ -1,3 +1,5 @@
+import React from "react";
+
 import FormPost from "../components/Form/Post";
 import FormDelete from "../components/Form/Delete";
 import FormUpdate from "../components/Form/Update";
@@ -15,15 +17,6 @@ export default function Administration() {
       <FormDelete />
 
       <FormUpdate />
-
-      {/* <div className="update__item">
-        <label htmlFor="idProduct">
-          {" "}
-          Atualizar produto
-          <input type="number" placeholder="id do produto" />
-          <button className="btn__delete">Procurar</button>
-        </label>
-      </div> */}
 
       <Footer />
     </>
