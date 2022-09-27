@@ -91,7 +91,9 @@ public class HarmonyService {
 
     // Model
     private void copyDtoForEntity(HarmonyDto dto, Harmony entity) {
-        entity.setNamePlate(dto.getNameplate());
+
+        entity.setNameplate(dto.getNameplate());
+        entity.setImage(dto.getImage());
     }
 
 }

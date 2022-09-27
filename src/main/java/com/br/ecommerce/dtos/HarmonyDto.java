@@ -9,18 +9,21 @@ public class HarmonyDto implements Serializable {
 
     private Integer id;
     private String nameplate;
+    private String image;
 
     public HarmonyDto() {
     }
 
-    public HarmonyDto(Integer id, String nameplate) {
+    public HarmonyDto(Integer id, String nameplate, String image) {
         this.id = id;
         this.nameplate = nameplate;
+        this.image = image;
     }
 
     public HarmonyDto(Harmony harmony) {
         this.id = harmony.getId();
-        this.nameplate = harmony.getNamePlate();
+        this.nameplate = harmony.getNameplate();
+        this.image = harmony.getImage();
     }
 
     public Integer getId() {
@@ -39,4 +42,11 @@ public class HarmonyDto implements Serializable {
         this.nameplate = nameplate;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }

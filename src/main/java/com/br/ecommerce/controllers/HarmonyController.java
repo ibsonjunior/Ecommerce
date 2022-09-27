@@ -12,7 +12,7 @@ import java.util.List;
 
 @RestController
 @CrossOrigin(origins = "*", allowedHeaders = "*")
-@RequestMapping(value = "/categories")
+@RequestMapping(value = "/harmonies")
 public class HarmonyController {
 
     @Autowired

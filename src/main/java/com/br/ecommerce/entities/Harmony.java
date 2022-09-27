@@ -12,18 +12,22 @@ public class Harmony implements Serializable {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer id;
     private String nameplate;
+    @Column(columnDefinition = "TEXT")
+    private String image;
 
     // Construtor padrão
     public Harmony() {
     }
 
     // Construtor com atributos
-    public Harmony(Integer id, String nameplate) {
+
+
+    public Harmony(Integer id, String nameplate, String image) {
         this.id = id;
         this.nameplate = nameplate;
+        this.image = image;
     }
 
-    // Getters and Setters
     public Integer getId() {
         return id;
     }
@@ -32,12 +36,19 @@ public class Harmony implements Serializable {
         this.id = id;
     }
 
-    public String getNamePlate() {
+    public String getNameplate() {
         return nameplate;
     }
 
-    public void setNamePlate(String nameplate) {
+    public void setNameplate(String nameplate) {
         this.nameplate = nameplate;
     }
 
+    public String getImage() {
+        return image;
+    }
+
+    public void setImage(String image) {
+        this.image = image;
+    }
 }
