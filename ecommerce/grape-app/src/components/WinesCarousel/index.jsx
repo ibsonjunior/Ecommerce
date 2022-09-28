@@ -3,6 +3,12 @@ import GuardaRios from "../../assets/Vinho_Branco/GuardaRios.png";
 import Calitera from "../../assets/Vinho_Tinto/calitera.png";
 
 function WinesCarousel() {
+
+
+
+
+    
+
   return (
     <div
       id="carouselExampleIndicators"

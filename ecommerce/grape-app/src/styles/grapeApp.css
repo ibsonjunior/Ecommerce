@@ -21,6 +21,14 @@
   height: 60vh;
 }
 
+#topWine_02 {
+  display: none;
+}
+
+#topWine_03 {
+  visibility: hidden;
+}
+
 .shoppingCart {
   background: transparent;
   border: none;
@@ -590,9 +598,6 @@ html {
 
 body {
   background-color: #231f2a;
-}
-
-.mainContent {
-  margin-top: 21vh;
+  overflow-x: hidden;
 }
 /*# sourceMappingURL=grapeApp.css.map */

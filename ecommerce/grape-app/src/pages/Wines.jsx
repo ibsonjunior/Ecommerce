@@ -2,8 +2,46 @@ import "react-responsive-carousel/lib/styles/carousel.min.css";
 import Cordeiro from '../assets/Vinho_Branco/Cordeiro.png'
 import GuardaRios from '../assets/Vinho_Branco/GuardaRios.png'
 import Footer from '../components/Footer'
+import React, { useState, useEffect } from 'react'
 
 export default function Wines() {
+
+  const [wineList, setWineList] = useState([])
+
+  useEffect(() => {
+    fetch("http://52.53.186.98:9000/products").then((response) => {
+      response.json().then((data) => {
+        setWineList(data);
+        console.log(data);
+      });
+    });
+  }, []);
+
+  let vinhoTinto = [];
+  let vinhoBranco= [];
+  let vinhoVerde= [];
+
+  vinhoTinto = wineList.filter((vinho) => {
+    if(vinho.categories[0].id === 1 ){
+      return vinho;
+    }
+  })
+
+  vinhoBranco = wineList.filter((vinho) => {
+    if(vinho.categories[0].id === 2 ){
+      return vinho;
+    }
+  })
+
+  vinhoVerde = wineList.filter((vinho) => {
+    if(vinho.categories[0].id === 3 ){
+      return vinho;
+    }
+  })
+
+  console.log(vinhoTinto)
+  console.log(vinhoBranco)
+  console.log(vinhoVerde)
 
   return(
 
@@ -15,8 +53,9 @@ export default function Wines() {
               <h1 className="wine_titles">Vinhos</h1>
             </div>
 
-            <section className="wines_section">
-              <h2 className="wine_name">Vinho Tinto</h2>
+            <h2 className="wine_name"> vinhoTinto.categories </h2>
+             
+            <section className="wines_section"> 
               <div
                 id="carouselExampleFade"
                 className="carousel slide carousel-fade"
@@ -68,9 +107,7 @@ export default function Wines() {
 
             </section>
 
-     
-
-            
+                 
             <Footer />
 
           </div>

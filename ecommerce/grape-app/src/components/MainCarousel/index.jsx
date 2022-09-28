@@ -188,7 +188,7 @@ function CarouselFadeExample() {
   let topWine = [];
 
   topWine = wineState.filter((vinho) => {
-    if (vinho.price > 60.0) {
+    if (vinho.price > 20.0) {
       return vinho;
     }
   });
@@ -290,14 +290,14 @@ function CarouselFadeExample() {
                 >
                   <Card.Img
                     variant="right"
-                    src={topWine[0]?.image}
+                    src={topWine[4]?.image}
                     alt="First Card"
                     style={{ height: "30vh" }}
                   />
                   <Card.Body>
-                    <Card.Title>{topWine[0]?.title} - {topWine[0]?.categories[0]?.name}</Card.Title>
+                    <Card.Title>{topWine[4]?.title} - {topWine[4]?.categories[4]?.name}</Card.Title>
                     <Card.Text>
-                      {topWine[0]?.description}
+                      {topWine[4]?.description}
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -315,14 +315,14 @@ function CarouselFadeExample() {
                 >
                   <Card.Img
                     variant="right"
-                    src={topWine[1]?.image}
+                    src={topWine[5]?.image}
                     alt="Second Card"
                     style={{ height: "30vh" }}
                   />
                   <Card.Body>
-                    <Card.Title>{topWine[1]?.title} - {topWine[1]?.categories[0]?.name}</Card.Title>
+                    <Card.Title>{topWine[5]?.title} - {topWine[5]?.categories[0]?.name}</Card.Title>
                     <Card.Text>
-                      {topWine[1]?.description}
+                      {topWine[5]?.description}
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>
@@ -340,14 +340,14 @@ function CarouselFadeExample() {
                 >
                   <Card.Img
                     variant="top"
-                    src={topWine[2]?.image}
+                    src={topWine[6]?.image}
                     alt="Third Card"
                     style={{ height: "30vh" }}
                   />
                   <Card.Body>
-                    <Card.Title>{topWine[2]?.title} - {topWine[2]?.categories[0]?.name}</Card.Title>
+                    <Card.Title>{topWine[6]?.title} - {topWine[6]?.categories[0]?.name}</Card.Title>
                     <Card.Text>
-                      {topWine[2]?.description}
+                      {topWine[6]?.description}
                     </Card.Text>
                   </Card.Body>
                   <Card.Footer>

@@ -6,11 +6,15 @@ import FormUpdate from "../components/Form/Update";
 import Footer from "../components/Footer";
 
 import { Navbar } from "react-bootstrap";
+import ProductsAdm from "../components/ProductsAdm";
 
 export default function Administration() {
+
   return (
     <>
       <Navbar />
+
+      <ProductsAdm />
 
       <FormPost />
 
