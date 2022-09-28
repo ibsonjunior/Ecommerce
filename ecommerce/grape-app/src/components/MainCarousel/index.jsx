@@ -177,7 +177,15 @@ function CarouselFadeExample() {
   const [wineState, setWine] = useState([]);
 
   useEffect(() => {
-    fetch("http://52.53.186.98:9000/products").then((response) => {
+    fetch("http://54.177.105.189:8081/products", {
+      method: "GET",
+      headers: {
+        "Accept": "*/* , application/json, text/plain",
+        "Content-Type": "application/json",
+        "Access-Control-Allow-Headers": "*",
+        "Access-Control-Allow-Origin": "* , http://127.0.0.1:9000", 
+      },
+    }).then((response) => {
       response.json().then((data) => {
         setWine(data);
         console.log(data);
@@ -188,7 +196,7 @@ function CarouselFadeExample() {
   let topWine = [];
 
   topWine = wineState.filter((vinho) => {
-    if (vinho.price > 20.0) {
+    if (vinho.price > 90.0) {
       return vinho;
     }
   });

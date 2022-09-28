@@ -9,7 +9,7 @@ export default function Wines() {
   const [wineList, setWineList] = useState([])
 
   useEffect(() => {
-    fetch("http://52.53.186.98:9000/products").then((response) => {
+    fetch("http://54.177.105.189:9000/products").then((response) => {
       response.json().then((data) => {
         setWineList(data);
         console.log(data);

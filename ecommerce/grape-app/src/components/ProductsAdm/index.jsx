@@ -6,18 +6,16 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 export default function ProductsAdm() {
   const [allProducts, setAllProducts] = useState([]);
 
-  fetch("http://52.53.186.98:9000/products").then((response) => {
+  fetch("http://54.177.105.189:8081/products").then((response) => {
     response.json().then((data) => {
       setAllProducts(data);
       console.log(allProducts)
     });
   });
 
-  
-
   return (
     <>
-      {/* <h1>Produtos cadastrados</h1>
+      <h1>Produtos cadastrados</h1>
 
       <div>
         <Container
@@ -26,6 +24,7 @@ export default function ProductsAdm() {
           style={{ width: "100vw" }}
         >
           <Row xs={2} md={4}>
+
             {allProducts.map((products) => (
               <Col xs={6} md={3}>
                 <Card
@@ -50,9 +49,9 @@ export default function ProductsAdm() {
                       {products.price}
                     </Card.Text>
                   </Card.Body>
-                  <Card.Footer className="d-flex justify-content-md-center"> */}
-                    {/* <div className="d-flex"> */}
-                    {/* <Button
+                  <Card.Footer className="d-flex justify-content-md-center"> 
+                    <div className="d-flex">
+                    <Button
                       variant="primary"
                       style={{ height: "5vh", width: "20vw" }}
                     >
@@ -60,26 +59,27 @@ export default function ProductsAdm() {
                     </Button>
                     <Button
                       variant="danger"
-                      style={{ height: "5vh", width: "20vw" }} */}
-                      {/* // onClick={DeleteWine(products.id)} */}
-                    {/* >
+                      style={{ height: "5vh", width: "20vw" }}
+                      // onClick={DeleteWine(products.id)}
+                    >
                       Delete
                     </Button>
-                    {/* </div> */}
-                  {/* </Card.Footer> */} 
+                    </div>
+                    </Card.Footer>
 
-                  {/* <h1>{products.title}</h1>
+                    {/* <h1>{products.title}</h1>
                     <p>{products.description}</p>
                     <p>{products.price}</p>
-                    <img src={products.image} alt=""/> */}
+                    <img src={products.image} alt=""/>
 
-                  {/* </Row> */}
-                {/* </Card>
+                  </Row> */}
+                </Card>
               </Col>
             ))}
+            
           </Row>
         </Container>
-      </div> */}
+      </div>
     </>
   );
 }

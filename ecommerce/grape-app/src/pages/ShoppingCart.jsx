@@ -8,7 +8,7 @@ function ShoppingCart(){
     // const [wineState, setWine] = useState([]);
 
     useEffect(() => {
-      fetch("http://52.53.186.98:9000/products").then((response) => {
+      fetch("http://54.177.105.189:9000/products").then((response) => {
         response.json().then((data) => {
         //   setWine(data);
           console.log(data);
