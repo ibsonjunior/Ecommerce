@@ -3,7 +3,8 @@ import CarouselFadeExample from "../components/MainCarousel/index";
 import HarmonyCarousel from "../components/Harmony";
 import Footer from "../components/Footer";
 
-import React, { useState, useEffect } from "react";
+
+import React, { useState, useEffect} from "react";
 import Media from "../components/Media";
 
 function Home() {
@@ -41,12 +42,15 @@ function Home() {
   //   });
   // }, []);
 
+  
+
 
 
   return (
     <>
       <WineHouse />
       <h1>MELHORES VINHOS</h1>
+   
       <CarouselFadeExample />
 
       <div className="harmony">

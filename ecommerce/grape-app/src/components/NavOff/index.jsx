@@ -83,6 +83,12 @@ function NavOffCanvas() {
                       Admin
                     </Link>
                   </Nav.Link>
+
+                  <Nav.Link href="#action6">
+                    <Link className="nav-link" to="/WineProduct">
+                      Product
+                    </Link>
+                  </Nav.Link>
                 </Nav>
 
                 <Form className="d-flex block">

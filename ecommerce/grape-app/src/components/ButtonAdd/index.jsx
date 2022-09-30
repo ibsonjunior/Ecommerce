@@ -3,16 +3,27 @@ import React, { useState, useEffect } from 'react'
 
 function ButtonAdd() {
 
-    const [quantidade, setQuantidade] = useState(
+    const [quantidade, setQuantity] = useState(
         (quantidade) => {
-            return quantidade = 1;
+            return quantidade = 0;
+        } 
+    ) 
+
+    function addWine() {
+        setQuantity(quantidade + 1);
+    }
+
+    function removeWine() {
+        if (quantidade > 0) {
+            setQuantity(quantidade -1);
         }
-    )
+    }
+
 
 
     return (
         <>
-            <div className="btn__options"> <button onClick={() => setQuantidade(quantidade - 1)}>Menos</button>  {quantidade} Garrafa  <button onClick={() => setQuantidade(quantidade + 1)}>Mais</button> </div>
+            <div className="btn__options"> <button onClick={removeWine}>-</button>  {quantidade} Garrafa  <button onClick={addWine}>+</button> </div>
         </>
     )
 }
