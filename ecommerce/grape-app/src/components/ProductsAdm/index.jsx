@@ -1,5 +1,6 @@
 import React, { useState, useContext, useEffect } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 // import { DeleteWine } from "../Form/Delete";
 
@@ -10,7 +11,7 @@ import { Container, Row, Col, Button, Card } from "react-bootstrap";
 export default function ProductsAdm() {
   const [allProducts, setAllProducts] = useState([]);
 
-  fetch("http://54.177.105.189:8081/products").then((response) => {
+  fetch("http://54.215.156.182:8081/products").then((response) => {
     response.json().then((data) => {
       setAllProducts(data);
       console.log(allProducts)
@@ -61,7 +62,7 @@ export default function ProductsAdm() {
                       variant="primary"
                       style={{ height: "5vh", width: "20vw" }}
                     >
-                      Update
+                      <Link variant={"outline-disabled"}>Update</Link>
                     </Button>
 
 

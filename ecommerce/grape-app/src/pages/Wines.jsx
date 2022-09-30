@@ -44,13 +44,16 @@ export default function Wines() {
     ],
   };
 
-  const { wines, setCart } = useContext(ProductContext);
+  const { wines, cart, setCart } = useContext(ProductContext);
 
   const listProducts = JSON.parse(localStorage.getItem("Products")) || [];
 
   // const addToCart = (wine) => {
   //   setCart([wine]);
   // };
+
+  {cart.map(produto => <div key={produto.id}> titulo={produto.title} id={produto.id} image={produto.image} price={produto.price}</div>)}
+
 
   const filteredWines = wines.filter((wines) =>
     wines.categories.find((categorie) => categorie.id === 1)
@@ -76,7 +79,7 @@ export default function Wines() {
         JSON.stringify([...listProducts, props])
       );
 
-      // listProducts.push(props);
+      listProducts.push(props);
 
       setCart(listProducts);
     }
@@ -85,12 +88,15 @@ export default function Wines() {
 
   useEffect(() => {
     if (localStorage.getItem("carrinho") != null) {
+      console.log(listProducts)
       setCart(listProducts);
     }
   }, []);
 
+  console.log(listProducts);
 
-  setCart(listProducts);
+
+  // setCart(listProducts);
   // }
 
   // const listProd = JSON.parse(localStorage.getItem('Products'));
