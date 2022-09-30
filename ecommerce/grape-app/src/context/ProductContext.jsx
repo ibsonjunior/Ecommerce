@@ -14,7 +14,7 @@ const ProductContextProvider = ({children}) =>{
 
     // saveCart();
 
-    const url = "http://54.215.156.182:8081/products"
+    const url = "http://52.53.193.244:8081/products"
 
     useEffect(() => {
         fetch(url)

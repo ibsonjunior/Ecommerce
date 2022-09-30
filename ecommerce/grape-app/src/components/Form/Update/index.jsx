@@ -136,7 +136,7 @@ const FormUpdate = () => {
 export default FormUpdate;
 
 function UpdateWine() {
-  fetch(`http://54.177.105.189:9000/products/${updateProductId.value}`, {
+  fetch(`http://52.53.193.244:8081/products/${updateProductId.value}`, {
     method: "PUT",
     headers: {
       "Accept": "*/* , application/json, text/plain",

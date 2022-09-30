@@ -118,7 +118,7 @@ const FormPost = () => {
 export default FormPost;
 
 function NewWine() {
-  fetch("http://54.177.105.189:9000/products", {
+  fetch("http://52.53.193.244:8081/products", {
     method: "POST",
     headers: {
       "Accept": "*/*",

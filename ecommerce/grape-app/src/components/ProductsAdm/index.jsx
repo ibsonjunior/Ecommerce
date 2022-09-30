@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 export default function ProductsAdm() {
   const [allProducts, setAllProducts] = useState([]);
 
-  fetch("http://54.215.156.182:8081/products").then((response) => {
+  fetch("http://52.53.193.244:8081/products").then((response) => {
     response.json().then((data) => {
       setAllProducts(data);
       console.log(allProducts)

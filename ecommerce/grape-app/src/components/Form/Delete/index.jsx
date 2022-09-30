@@ -46,7 +46,7 @@ const FormDelete = () => {
 export default FormDelete;
 
 export function DeleteWine(propdelete) {
-  fetch(`http://54.177.105.189:9000/products/${propdelete.value}`, {
+  fetch(`http://52.53.193.244:8081/products/${propdelete.value}`, {
     method: "DELETE",
     headers: {
       Accept: "*/*",

@@ -177,7 +177,7 @@ function CarouselFadeExample() {
   const [wineState, setWine] = useState([]);
 
   useEffect(() => {
-    fetch("http://54.177.105.189:8081/products", {
+    fetch("http://52.53.193.244:8081/products", {
       method: "GET",
       headers: {
         "Accept": "*/* , application/json, text/plain",
