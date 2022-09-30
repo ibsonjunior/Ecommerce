@@ -5,15 +5,15 @@ import ButtonCompra from '../components/ButtonCompra/index.jsx'
 export default function WineProduct() {
   return (
     <>
-      <div className="d-flex flex-row justify-content-between align-items-center mt-5">
-                <img className="mt-5 mr-5 ml-5 w135 h200" src={ Garrafa } alt=""/>
-                <h1 className="text-white">Vik</h1>
+      <div className="product_background">
+                <img className="product_image" src={ Garrafa } alt=""/>
+                <h1 className="wine_product_title">Vik</h1>
             </div>
             {/* informações */}
             <div className="d-flex flex-row justify-content-between align-items-center mt-5" >
-                <span className="d-inline-block text-truncate text-light"><p>FRANÇA</p></span>
-                <span className="d-inline-block text-truncate text-light"><p>VINHO TINTO</p></span>
-                <span className="d-inline-block text-truncate text-light"><p>Millahue,2018</p></span>               
+                <span className="categoria_Vinho"><p>FRANÇA</p></span>
+                <span className="categoria_Vinho"><p>VINHO TINTO</p></span>
+                <span className="categoria_Vinho"><p>Millahue,2018</p></span>               
             </div>
             {/* box de preço */}
             <div className="card-body w-100 bg-dark p-3 d-flex justify-content-center">
@@ -31,9 +31,9 @@ export default function WineProduct() {
             {/* descrição */}
             <div className="d-flex flex-row justify-content-between align-items-center mt-5">
                 <ul>
-                    <li className="text-white">COMPOSIÇÃO UVA: Malbec</li>
-                    <li className="text-white">COR: Roxo intenso</li>
-                    <li className="text-white">TEOR ALCÓOLICO: 13%</li>
+                    <li className="categoria_Vinho">COMPOSIÇÃO UVA: Malbec</li>
+                    <li className="categoria_Vinho">COR: Roxo intenso</li>
+                    <li className="categoria_Vinho">TEOR ALCÓOLICO: 13%</li>
                 </ul>
             </div> 
     </>
