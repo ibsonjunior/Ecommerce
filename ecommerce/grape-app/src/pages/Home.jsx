@@ -1,5 +1,5 @@
 import WineHouse from "../components/WineHouse";
-import CarouselFadeExample from "../components/MainCarousel/index";
+import TopWinesCarousel from "../components/MainCarousel/test";
 import HarmonyCarousel from "../components/Harmony";
 import Footer from "../components/Footer";
 
@@ -49,9 +49,8 @@ function Home() {
   return (
     <>
       <WineHouse />
-      <h1>MELHORES VINHOS</h1>
    
-      <CarouselFadeExample />
+      <TopWinesCarousel />
 
       <div className="harmony">
         <HarmonyCarousel />

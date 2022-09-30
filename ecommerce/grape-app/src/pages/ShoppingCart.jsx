@@ -7,6 +7,17 @@ import Footer from '../components/Footer'
 function ShoppingCart(){
 
 const {cart, setCart} = useContext(ProductContext);
+
+useEffect(() => {
+    if(localStorage.getItem("carrinho") != null){
+        setCart(JSON.parse(localStorage.getItem("carrinho")))
+    }
+},
+[
+
+]
+)
+
 console.log(cart);
 
 // const itens = cart.map((products) => (products.map((products))))
@@ -38,10 +49,10 @@ console.log(cart);
             style={{ width: "100vw", height: "30vh"}}>
 
 
-            {cart.map((wine) => ( 
-                <li className="text-light">{wine.description}</li>
+            {cart.map((products) => products.map((wine) => <li className="text-light">{wine.description}</li> ) 
+                
             
-            ))}
+            )}
 
             
             </ul>

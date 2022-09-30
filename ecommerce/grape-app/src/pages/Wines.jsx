@@ -44,9 +44,9 @@ export default function Wines() {
     ],
   };
 
-
-
   const { wines, setCart } = useContext(ProductContext);
+
+  const listProducts = JSON.parse(localStorage.getItem("Products")) || [];
 
   // const addToCart = (wine) => {
   //   setCart([wine]);
@@ -56,35 +56,49 @@ export default function Wines() {
     wines.categories.find((categorie) => categorie.id === 1)
   );
 
+  // const categorieFilter = wines.filter((wine) => wine.categories.find(category.id));
+
+  // console.log(categorieFilter);
+
   // useEffect(() => {
 
-    const addProductCart = (props) => {
+  const addProductCart = (props) => {
+    if (localStorage.getItem("Products") === null) {
+      listProducts.push(props);
 
-    if(localStorage.getItem('Products') === null) {
+      localStorage.setItem("Products", JSON.stringify([props]));
 
-      localStorage.setItem('Products',JSON.stringify([props]));
-
+      setCart(listProducts);
     } else {
-
+      // const listProds = JSON.parse(localStorage.getItem('Products'));
       localStorage.setItem(
-        'Products', JSON.stringify([
-          ...JSON.parse(localStorage.getItem('Products')),
-          props])
-          );
-      }
+        "Products",
+        JSON.stringify([...listProducts, props])
+      );
 
-      
-      
+      // listProducts.push(props);
+
+      setCart(listProducts);
     }
+    return listProducts;
+  };
+
+  useEffect(() => {
+    if (localStorage.getItem("carrinho") != null) {
+      setCart(listProducts);
+    }
+  }, []);
 
 
+  setCart(listProducts);
+  // }
 
-    useEffect(() => {
-      const itens = JSON.parse(localStorage.getItem('Products'));
-      if (itens) {
-        setCart(itens);
-      }
-    }, []);
+  // const listProd = JSON.parse(localStorage.getItem('Products'));
+
+  // setCart(JSON.parse(localStorage.getItem('Products')));
+
+  // setCart(listProd);
+
   // },
   // [addToCart]);
 
@@ -97,6 +111,69 @@ export default function Wines() {
           <div className="div_wine_titles">
             <h1 className="wine_titles">Vinhos</h1>
           </div>
+          {/* {categorieFilter.map((categorie) => categorie.id === 1 */}
+          <section className="wines_section">
+            <h2 className="wine_name">Vinho Tinto</h2>
+
+            <div>
+              <Slider {...settings}>
+                {/* <Link className="" to="/Carrinho"> */}
+                {filteredWines.map((wine) => {
+                  return (
+                    <div key={wine.id}>
+                      <div className="carousel-wine-item ">
+                        <img
+                          className="img_wine"
+                          src={wine.image}
+                          alt="wineImage"
+                        />
+                        <div className="div_wine">
+                          <h4 className="title_">{wine.title}</h4>
+                          <p className="description_wine">{wine.description}</p>
+                          <button onClick={() => addProductCart([wine])}>
+                            Compre
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* </Link> */}
+              </Slider>
+            </div>
+          </section>
+
+          {/* )} */}
+          <section className="wines_section">
+            <h2 className="wine_name">Vinho Tinto</h2>
+
+            <div>
+              <Slider {...settings}>
+                {/* <Link className="" to="/Carrinho"> */}
+                {filteredWines.map((wine) => {
+                  return (
+                    <div key={wine.id}>
+                      <div className="carousel-wine-item ">
+                        <img
+                          className="img_wine"
+                          src={wine.image}
+                          alt="wineImage"
+                        />
+                        <div className="div_wine">
+                          <h4 className="title_">{wine.title}</h4>
+                          <p className="description_wine">{wine.description}</p>
+                          <button onClick={() => addProductCart([wine])}>
+                            Compre
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  );
+                })}
+                {/* </Link> */}
+              </Slider>
+            </div>
+          </section>
 
           <section className="wines_section">
             <h2 className="wine_name">Vinho Tinto</h2>
@@ -132,4 +209,4 @@ export default function Wines() {
       </div>
     </>
   );
-}
+};

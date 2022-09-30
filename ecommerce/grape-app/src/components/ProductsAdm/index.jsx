@@ -1,7 +1,11 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useContext, useEffect } from "react";
 import { Container, Row, Col, Button, Card } from "react-bootstrap";
 
 // import { DeleteWine } from "../Form/Delete";
+
+// import { ProductContext } from "../../context/ProductContext";
+
+// const { wines } = useContext(ProductContext);
 
 export default function ProductsAdm() {
   const [allProducts, setAllProducts] = useState([]);
@@ -51,19 +55,24 @@ export default function ProductsAdm() {
                   </Card.Body>
                   <Card.Footer className="d-flex justify-content-md-center"> 
                     <div className="d-flex">
+
+
                     <Button
                       variant="primary"
                       style={{ height: "5vh", width: "20vw" }}
                     >
                       Update
                     </Button>
+
+
                     <Button
                       variant="danger"
-                      style={{ height: "5vh", width: "20vw" }}
+                      style={{ height: "5vh", width: "20vw", color: "#000000" }}
                       // onClick={DeleteWine(products.id)}
                     >
                       Delete
                     </Button>
+
                     </div>
                     </Card.Footer>
 
